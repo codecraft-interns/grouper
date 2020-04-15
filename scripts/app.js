@@ -1,3 +1,3 @@
 (() => {
-    console.log('write your code here')
+    console.log('Testing')
 })()
