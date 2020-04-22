@@ -1,80 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Generic Grouper</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Generic Grouper</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
 
-<body>
+    <body>
 
-    <header class="text-center header">Codecraft Interns</header>
+        <header class="text-center header">Codecraft Interns</header>
 
-    <div class="group-layout group-layout--center">
+        <div class="group-layout group-layout--center">
 
-        <!-- left section -->
-        <div class="group-layout__section">
-            <div class="group-layout__section-title">Front End Developer</div>
-            <div class="group-layout__groups" id="front-end-resources">
-                <!-- dynamic part:start -->
+            <!-- left section -->
+            <div class="group-layout__section">
+                <div class="group-layout__section-title">Front End Developer</div>
+                <div class="group-layout__groups" id="front-end-resources">
+                    <!-- dynamic part:start -->
 
-                <!-- group -->
-                <!-- <div class="group-layout__group">
+                    <!-- group -->
+                    <div class="group-layout__group__front-end">
 
-                    <div class="group-layout__group-header">
-                        <div class="group-layout__group-name">Group</div>
-                        <div class="group-layout__group-btn group-layout__group-btn--add">+</div>
-                    </div> -->
-
-                <!-- group items -->
-                <!-- <div class="group-layout__group-items">
-                        <div class="group-layout__group-item">
-                            <div class="group-layout__group-item-name">Member</div>
-                            <div class="group-layout__group-btn group-layout__group-btn--add">+</div>
+                        <div class="group-layout__group-header">
+                            <div class="group-layout__group-name"
+                                id="group-name">Group</div>
+                            <div class="group-layout__group-btn
+                                group-layout__group-btn--add" id='group-AddBtn'>+</div>
                         </div>
 
-                        <div class="group-layout__group-item">
-                            <div class="group-layout__group-item-name">Member</div>
-                            <div class="group-layout__group-btn group-layout__group-btn--add">+</div>
+                        <!-- group items -->
+                        <div class="group-layout__group-items">
+                            <div class="group-layout__group-item">
+                                <div class="group-layout__group-item-name"
+                                    id="member-name">Member</div>
+                                <div class="group-layout__group-btn
+                                    group-layout__group-btn--add"
+                                    id="member-AddBtn">+</div>
+                            </div>
+
                         </div>
-                    </div>
-                </div> -->
+                        <div class="group-layout__group-items">
+                            <div class="group-layout__group-item">
+                                <div class="group-layout__group-item-name"
+                                    id="member-name1">Member</div>
+                                <div class="group-layout__group-btn
+                                    group-layout__group-btn--add"
+                                    id="member-AddBtn">+</div>
+                            </div>
 
-                <!-- dynamic part:end -->
-            </div>
-        </div>
+                        </div>
+                        <div class="group-layout__group-items">
+                            <div class="group-layout__group-item">
+                                <div class="group-layout__group-item-name"
+                                    id="member-name2">Member</div>
+                                <div class="group-layout__group-btn
+                                    group-layout__group-btn--add"
+                                    id="member-AddBtn">+</div>
+                            </div>
 
-        <!-- right section -->
-        <div class="group-layout__section">
-            <div class="group-layout__section-title">Back End Developer</div>
-            <div class="group-layout__groups" id="back-end-resources">
-                <!-- dynamic part:start -->
-
-                <!-- group -->
-                <!-- <div class="group-layout__group">
-
-                    <div class="group-layout__group-header">
-                        <div class="group-layout__group-name">Group</div>
-                        <div class="group-layout__group-btn group-layout__group-btn--minus">-</div>
-                    </div> -->
-
-                <!-- group items -->
-                <!-- <div class="group-layout__group-items">
-                        <div class="group-layout__group-item">
-                            <div class="group-layout__group-item-name">Memeber</div>
-                            <div class="group-layout__group-btn group-layout__group-btn--minus">-</div>
                         </div>
                     </div>
-                </div> -->
 
-                <!-- dynamic part:end -->
+
+                    <!-- dynamic part:end -->
+                </div>
+            </div>
+
+            <!-- right section -->
+            <div class="group-layout__section">
+                <div class="group-layout__section-title">Back End Developer</div>
+                <div class="group-layout__groups" id="back-end-resources">
+                    <!-- dynamic part:start -->
+
+                    <!-- group -->
+                    <div class="group-layout__group__back-end">
+
+
+
+                    </div>
+
+                    <!-- dynamic part:end -->
+                </div>
             </div>
         </div>
-    </div>
-    <script src="scripts/app.js"></script>
-</body>
+        <script src="scripts/app.js"></script>
+    </body>
 
 </html>
