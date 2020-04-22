@@ -1,4 +1,4 @@
-[
+var data=[
   {
     "name": "Ranjith",
     "groupName": "Mercury",
@@ -29,6 +29,7 @@
     "groupId": "GP_02",
     "id": "CC05"
   },
+  
   {
     "name": "Kiran",
     "groupName": "Venus",
