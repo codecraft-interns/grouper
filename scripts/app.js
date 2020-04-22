@@ -2,6 +2,7 @@
     window.onload = function () {
 
         const mainView = document.getElementById('front-end-resources');
+        const rightmainView = this.document.getElementById('back-end-resources');
         const swapiAPI = () => ` http://localhost:3000/groupname/?format=json`;
         function getRecord() {
             return fetch(swapiAPI()).then(res => {
@@ -10,7 +11,8 @@
                         if (data.length > 0) {
 
                             grouped = {};
-                            function addCoucounnter() {
+
+                            function display() {
                                 let groups = [];
                                 let groupedItems = {};
                                 data.map(e => {
@@ -24,44 +26,75 @@
                                 console.log(groupedItems);
                                 console.log(groups);
                                 for (let d of groups) {
-                                    let groupHtml = `<div class="group-layout__group">
+                                    let groupHtml = `<div class="group-layout__group" id="group">
                                     <div class="group-layout__group-header" >
                                         <div class="group-layout__group-name" id="group_name">${d}</div>
-                                        <div class="group-layout__group-btn group-layout__group-btn--add" id=""group1" >+</div>
+                                        <div class="group-layout__group-btn group-layout__group-btn--add" id="remove_group"  >+</div>
                                     </div>`;
                                     mainView.innerHTML += groupHtml;
                                     for (let list of groupedItems[d]) {
-                                        const counterTemplate = `
-                                        <div class="group-layout__group-item">
+                                        const memberHtml = `
+                                        <div class="group-layout__group-item" id="member">
                                                     <div class="group-layout__group-item-name" id="${list.name}">${list.name}</div>
-                                                    <div class="group-layout__group-btn  group-layout__group-btn--add" id="member" >+</div>
+                                                    <div class="group-layout__group-btn  group-layout__group-btn--add" id="remove_member" >+</div>
                                                 </div>
                                             </div>}
                                         
                                         </div>  `;
-                                        mainView.innerHTML += counterTemplate;
+                                        mainView.innerHTML += memberHtml;
 
                                     }
                                 }
                             }
-                            // function delet(){
-                            //     var element=document.getElementById("group_name");
-                            //     element.classList.remove("group-layout__group-name");
-                            //     console.log("class deleted ")
-                            // }
-                            // delet();
-                            addCoucounnter();
+
+                            display();
+
+                            function visibility() {
+                                //            document.getElementById("remove_group").onclick = function () {
+
+                                document.getElementById("grouponly").style.visibility = "hidden";
+                            }
 
 
+
+
+                            //window.onload=function(){
+                            //      document.getElementById("remove_group").onclick=function(){
+                            //     function hide_group(){
+
+                            //  document.getElementById("grouponly").style.visibility="hidden";
+
+                            // }hide_group();
+                            //  }
+
+
+
+                            function delet() {
+                                const group1 = document.getElementById("group");
+                                const remove_group = document.getElementById("remove_group");
+                                const member_remove = document.getElementById("member");
+                                const remove_member = document.getElementById("remove_member");
+                                if (remove_group) {
+                                    remove_group.addEventListener('click', function (e) {
+                                        group1.remove(mainView);
+                                        member_remove.remove(mainView)
+                                    }, false)
+                                }
+                                if (remove_member) {
+                                    remove_member.addEventListener('click', function (e) {
+                                        member_remove.remove(mainView);
+                                    }, false)
+                                }
+                            }
+
+                            delet();
                         }
-
-
                     });
             }
 
             )
         }
         getRecord();
-        // console.log('write your code here');
+
     }
 })()
