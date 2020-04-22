@@ -21,7 +21,7 @@
 }
 
 .group-layout__groups {
-  max-height: 600px;
+  max-height: 800px;
   overflow: auto;
   padding-right: 15px;
 }
