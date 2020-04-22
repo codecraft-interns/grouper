@@ -3,9 +3,9 @@
 
         const mainView = document.getElementById('front-end-resources');
         const rightmainView = this.document.getElementById('back-end-resources');
-        const swapiAPI = () => ` http://localhost:3000/groupname/?format=json`;
+        const groupAPI = () => ` http://localhost:3000/groupname/?format=json`;
         function getRecord() {
-            return fetch(swapiAPI()).then(res => {
+            return fetch(groupAPI()).then(res => {
                 res.json().then(
                     data => {
                         if (data.length > 0) {
