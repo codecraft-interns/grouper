@@ -13,7 +13,7 @@
 
     //JSON File
     const grpData =
-      `http://localhost:8080/assets/json/interns.json`;
+      `assets/json/interns.json`;
 
     //Fetch API
     function fetchData() {
