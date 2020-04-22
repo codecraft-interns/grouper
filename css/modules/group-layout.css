@@ -20,6 +20,9 @@
   width: 300px;
 }
 
+.group-layout__group__front-end {
+  padding-top: 2px;
+}
 .group-layout__groups {
   max-height: 600px;
   overflow: auto;
@@ -42,7 +45,7 @@
 }
 
 .group-layout__group-items {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .group-layout__group-item {
   padding: 5px 5px;
